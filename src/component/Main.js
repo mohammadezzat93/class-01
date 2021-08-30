@@ -1,15 +1,14 @@
 import React from 'react';
 
-
-let Main =  props => {
+class Main extends React.Component {
+    render(){
         return (
             <>
-                <div> {props.title} </div>
-                <p> {props.discription} </p>
-                
-                
+                <h2>{this.props.title}</h2>
+                <img src={this.props.imgUrl} alt={this.props.title} title={this.props.title} width="400" height="400" />
+                <p>{this.props.disecription}</p>
             </>
         )
 }
-
+}
 export default Main;
