@@ -2,21 +2,119 @@ import React from 'react';
 import Main from './component/Main'
 import Header from './component/Header'
 import Footer from './component/Footer'
+// import unicorn from './image/unicorn.jpg'
 
 class App extends React.Component {
   render() {
     return (
       <>
-      <Header />
+        <Header />
         <Main
           title='UniWhal'
-          imgUrl='http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg'
+          imgUrl={'http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg'}
           disecription='A unicorn and a narwhal nuzzling their horns'
         />
         <Main
           title='Rhino Family'
           imgUrl='https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80'
+          disecription='Mother (or father) rhino with two babies'
+        />
+
+
+        <Main
+          title='UniLego'
+          imgUrl='https://images.unsplash.com/photo-1518946222227-364f22132616?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4836a6fca62e7dce9324346bacfde085&auto=format&fit=crop&w=2534&q=80'
+          disecription='Lego figurine dressed in a unicorn outfit'
+        />
+
+        <Main
+          title='Basically a unicorn'
+          imgUrl='https://i.pinimg.com/736x/b4/61/06/b46106830b841017ea59870b27ec18dc--narwhals-a-unicorn.jpg'
+          disecription='A narwhal is basically a unicorn after all, right?'
+        />
+
+        <Main
+          title='truth'
+          imgUrl='https://i.pinimg.com/originals/16/cf/2a/16cf2a0b3fd51b9bee08bb6296193b75.jpg'
+          disecription='The truth behind narwhals'
+        />
+
+        <Main
+          title='Baby Rhino'
+          imgUrl='https://secure.img1-ag.wfcdn.com/im/17007094/resize-h800%5Ecompr-r85/3589/35892451/Baby+Rhino+Figurine.jpg'
+          disecription='This is actually a figurine but it looks kinda real'
+        />
+
+        <Main
+          title='Narwhal costume'
+          imgUrl='https://ae01.alicdn.com/kf/HTB18GwSQVXXXXaZaXXXq6xXFXXXh/Animal-Cosplay-Costume-Narwhal-Onesie-Mens-Womens-Cartoon-Whale-Pajamas.jpg'
+          disecription='A woman wearing a blue narwhal costume'
+        />
+
+        <Main
+          title='Rhino costume'
+          imgUrl='https://www.shopmascot.com/image/cache/mascotnew/new196-800x800.jpg'
+          disecription='Mascots have to get their costumes somewhere'
+        />
+
+        <Main
+          title='Believe'
+          imgUrl='https://www.tinselbox.com/wp-content/uploads/2018/03/I-BELIEVE-IN-UNICORNS-FREE-PRINTABLE-WATERCOLOR-7-of-1.jpg'
+          disecription='I believe in unicorns, do you?'
+        />
+
+        <Main
+          title='Baby markhor'
+          imgUrl='http://www.zooborns.com/.a/6a010535647bf3970b0223c84d5959200c-800wi'
+          disecription='Even the babies are adorable'
+        />
+
+
+        <Main
+          title='Mouflon'
+          imgUrl='https://images.unsplash.com/photo-1558560063-931ca9822a0c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'
+          disecription='Those horns though'
+        />
+
+        <Main
+          title='Baby mouflon'
+          imgUrl='https://cbsnews3.cbsistatic.com/hub/i/r/2013/03/05/5b414225-a645-11e2-a3f0-029118418759/thumbnail/620x350/2d4cf24685b45c22912e64d2004fec8d/Baby_Mouflon_Wild_Sheep.jpg'
+          disecription='The cuteness that is a baby mouflon asleep'
+        />
+
+        <Main
+          title='Serious Jacksons Chameleon'
+          imgUrl='https://imgc.allpostersimages.com/img/print/posters/dlillc-jackson-s-chameleon_a-G-13448768-14258384.jpg'
+          disecription='This one is very serious.'
+        />
+
+        <Main
+          title='Unicorn Head'
+          imgUrl='https://www.dhresource.com/0x0s/f2-albu-g5-M00-1A-11-rBVaI1hsIIiALxKzAAIHjSU3VkE490.jpg/wholesale-halloween-costume-prop-unicorn.jpg'
           disecription='Someone wearing a creepy unicorn head mask'
+        />
+
+        <Main
+          title='Happy Jacksons Chameleon'
+          imgUrl='https://images.unsplash.com/photo-1514036783265-fba9577fc473?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
+          disecription='These are really common in Hawaii'
+        />
+
+        <Main
+          title='Cera'
+          imgUrl='https://vignette.wikia.nocookie.net/landbeforetime/images/c/c3/Cera_infobox.png/revision/latest?cb=20180422005003'
+          disecription="Three horns but still, horns. And who doesn't like The Land Before Time?"
+        />
+        <Main
+          title='Markhor'
+          imgUrl='https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Markhor_Schraubenziege_Capra_falconeri_Zoo_Augsburg-02.jpg/220px-Markhor_Schraubenziege_Capra_falconeri_Zoo_Augsburg-02.jpg'
+          disecription='These wild goats eat snakes, then secrete a foam that locals fight over for the antivemon properties -- how cool is that?'
+        />
+
+        <Main
+          title='Addax'
+          imgUrl='https://images.unsplash.com/photo-1556890077-020ec300d5db?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80"'
+          disecription='This guy is basically extinct but survives well in captivity, so theyre frequently found in zoos'
         />
 
         <Footer />
