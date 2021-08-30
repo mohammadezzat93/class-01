@@ -1,42 +1,27 @@
 import React from 'react';
-import Unicorn_and_Narwhal_by_dinglehopper from './Unicorn_and_Narwhal_by_dinglehopper.jpg';
-import rhino from './rhino.jpg';
-import unicorn from './unicorn.jpg';
 import Main from './component/Main'
 import Header from './component/Header'
 import Footer from './component/Footer'
 
-class App extends React.Component{
-  render(){
-    return(
+class App extends React.Component {
+  render() {
+    return (
       <>
-       <Header/>
-       <table>
-        <Main title="UniWhal" />        
-        <div className="unicorn">
-          <img src={Unicorn_and_Narwhal_by_dinglehopper} width="400" height="400" />
-        </div>
+      <Header />
+        <Main
+          title='UniWhal'
+          imgUrl='http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg'
+          disecription='A unicorn and a narwhal nuzzling their horns'
+        />
+        <Main
+          title='Rhino Family'
+          imgUrl='https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80'
+          disecription='Someone wearing a creepy unicorn head mask'
+        />
 
-        <Main discription="A unicorn and a narwhal nuzzling their horns" />
-</table>
-
-<table>
-        <Main title="Rhino Family" />
-        <img src={rhino} width="400" height="400" />
-        <Main discription="A unicorn and a narwhal nuzzling their horns" />
-        </table>
-
-        <table>
-        <Main title="Unicorn Head" />
-        <img src={unicorn} width="400" height="400" />
-
-        <Main discription="Someone wearing a creepy unicorn head mask" />
-        </table>
-        <hr></hr>
-        
         <Footer />
-        
       </>
+
     );
   }
 }
