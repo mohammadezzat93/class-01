@@ -16,3 +16,13 @@ h1,h3{
   color: blue;
   padding: 2%;
 }
+
+.title{
+  color: rgb(148, 221, 1);
+  text-align: center;
+}
+.description{
+  color: rgb(30, 28, 126);
+  text-align: center;
+  font-size: 20px;
+}
