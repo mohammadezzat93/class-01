@@ -9,7 +9,8 @@ class HornedBeast extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            number: 0
+            number: 0,
+            mod : 0
         }
     }
     icrement = () => {
@@ -18,13 +19,20 @@ class HornedBeast extends React.Component {
 
         });
     }
+
+    addModal = () => {
+
+        this.setState({mod:this.state.mod +1});
+        this.props.showModal();
+        this.props.updateSelectedbeast(this.props.title, this.props.src,this.props.description);
+    }
     render() {
         return (
             <>
                     <Col>
                         <Card style={{ width: '25rem' }}>
 
-                            <Card.Img variant="top" src={this.props.imgURL} onClick={this.icrement}
+                            <Card.Img variant="top" src={this.props.src} onClick={this.icrement}
                                 width="200" height="200" />
 
                             <Card.Body className="description">
@@ -39,7 +47,7 @@ class HornedBeast extends React.Component {
                                     {this.props.description}
                                 </Card.Text>
                                 
-                                <Button variant="primary">Go somewhere</Button>
+                                <Button variant="success" onClick ={this.addModal}>Show Modal</Button>
                                 {/* <Button variant="primary" onClick = {this.rate} >Go somewhere</Button> */}
 
                             </Card.Body>
