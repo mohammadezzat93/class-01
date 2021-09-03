@@ -6,68 +6,57 @@ import Form from './component/Form'
 import data from './component/Hornedbeast.json';
 import SelectedBeast from './component/SelectedBeast'
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import './main.scss'
 
 class App extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
-     show : false,
-     title : '',
-     imgURL : '',
-     description : '',
-     data : data,
-     horned : '',
+      show: false,
+      title: '',
+      imgURL: '',
+      description: '',
+      data: data,
+      selectedItem: data,
     }
   }
-  showModal = () =>{
+
+  showModal = () => {
     this.setState({
-     show : true
- });
-}
+      show: true,
+    });
+  }
+
   handleClose = () => {
     this.setState({
-        show : false,
+      show: false,
     });
-}
+  }
 
-  updateSelectedbeast = (title,src,description) => {
+  updateSelectedbeast = (title, src, description) => {
     this.setState({
-      title : title,
-      src : src,
-      description : description
-      
-  });
+      title: title,
+      src: src,
+      description: description
+
+    });
   }
 
   submitHandler = e => {
-    e.preventDefault();
-    
+
     this.setState({
-      horned : e.target.horned.value,
-      list : data.json
-  });
-  }
-
-  horns = e => {
-
-    // e.filter(item =>{
-    //   if(item === 'All'){
-    //     return true;
-    //   }
-
-    if (e.target.horned.value === 1){
-      return this.state.data.horns;
-    }
-    else if (e.target.horned.value === 2){
-      return this.state.data.horns;
-    }
-    else if (e.target.horned.value === 3){
-      return this.state.data.horns;
-    }
-    else {
-      return this.state.data.horns;
-    }
+      selectedItem: this.state.data.filter(item => {
+        if (item.horns === parseInt(e.target.value)) {
+          return item;
+        }
+        else if (e.target.value === 'All') {
+          return item;
+        }
+        return false;
+      }
+      )
+    });
   }
 
   render() {
@@ -75,21 +64,22 @@ class App extends React.Component {
       <>
         <Header />
 
-       <Form onChange = {this.submitHandler} />
+        <Form submitHandler={this.submitHandler} />
 
         <Main
-                data={data}
-                showModal = {this.showModal}
-                updateSelectedbeast={this.updateSelectedbeast}
-                showhornes = {this.state.horned}
-              />
-              <SelectedBeast 
-                show= {this.state.show}
-                handleClose={this.handleClose}
-                title={this.state.title}
-                src={this.state.src}
-                description={this.state.description}
-              />
+          data={this.state.selectedItem}
+          showModal={this.showModal}
+          updateSelectedbeast={this.updateSelectedbeast}
+        />
+
+        <SelectedBeast
+          show={this.state.show}
+          handleClose={this.handleClose}
+          title={this.state.title}
+          src={this.state.src}
+          description={this.state.description}
+          data={this.state.selectedData}
+        />
 
         <Footer />
       </>
